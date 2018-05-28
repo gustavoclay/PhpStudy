@@ -86,3 +86,8 @@ class cliente {
 $cliente = new cliente();
 $cliente -> atribuirNome("Gustavo");
 var_dump($cliente);
+
+// Especias
+echo "<hr>";
+$nulo = null;
+var_dump($nulo);
