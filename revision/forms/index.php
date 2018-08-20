@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fomulário Teste</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <form action="dados.php" method="POST">
+    <form action="dados.php" method="GET">
         Nome: <input type="text" name="nome" id=""><br>
         Email: <input type="email" name="email" id=""><br>
-        <button type="Submit">Enviar</button>
+        <button type="submit">Enviar Dados</button>
     </form>
+    <br>
 
+    <a href="dados.php?nome=gustavo&idade=24">Enviar Dados</a>
 
 </body>
 </html>
