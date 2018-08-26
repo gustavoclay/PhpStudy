@@ -13,7 +13,7 @@ insert_final_newline = true
 charset = utf-8
 
 # Indentação via TAB, para pug e html
-[*.{pug,html}]
+[*.{pug,html,php}]
 indent_style = tab
 indent_size = 4
 
