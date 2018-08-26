@@ -1,4 +1,6 @@
 <?php
+//CONEXÃO COM O BD
+include_once 'php_action/db_connect.php';
 //HEADER
 include 'includes/header.php';
 ?>
@@ -16,18 +18,26 @@ include 'includes/header.php';
         </tr>
       </thead>
       <tbody>
+		<?php
+			$sql = "SELECT * FROM clientes";
+			$resultado = mysqli_query($connect, $sql);
+			while($dados = mysqli_fetch_array($resultado)):
+		?>
         <tr>
-          <td>Gustavo</td>
-          <td>Clay</td>
-          <td>vesp@vesp.com</td>
-          <td>24</td>
-          <td><a href="" class="btn-floating orange" ><i class="material-icons">edit</i></a></td>
-          <td><a href="" class="btn-floating red" ><i class="material-icons">delete</i></a></td>
+        	<td><?php echo $dados['nome']; ?></td>
+        	<td><?php echo $dados['sobrenome']; ?></td>
+        	<td><?php echo $dados['email']; ?></td>
+        	<td><?php echo $dados['idade']; ?></td>
+        	<td><a href="" class="btn-floating orange" ><i	class="material-icons">edit</i></a></td>
+        	<td><a href="" class="btn-floating red" ><i	class="material-icons">delete</i></a></td>
         </tr>
+		<?php
+			endwhile;
+		?>
       </tbody>
     </table>
     <br>
-    <a href="" class="btn" >Adicionar Cliente</a>
+    <a href="add.php" class="btn" >Adicionar Cliente</a>
   </div>
 </div>
 
