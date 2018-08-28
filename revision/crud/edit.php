@@ -17,6 +17,7 @@ if (isset($_GET['id'])) {
   <div class="col s12 m6 push-m3">
     <h3 class="light center-align"> Editar Cliente </h3>
     <form action="php_action/update.php" method="POST">
+		<input type="hidden" name="id" ssvalue="<?php echo $dados['id']; ?>">
 		<div class="input-field col s12">
 			<input type="text" name="nome" id="nome" value="<?php echo $dados['nome']; ?>">
 			<label for="nome">Nome</label>
@@ -33,7 +34,7 @@ if (isset($_GET['id'])) {
 			<input type="number" name="idade" id="idade" value="<?php echo $dados['idade']; ?>" required>
 			<label for="idade">Idade</label>
 		</div>
-		<button type="submit" name="btn-cadastrar" class="btn"> Atualizar </button>
+		<button type="submit" name="btn-editar" class="btn"> Atualizar </button>
 		<a href="index.php" type="submit" class="btn green"> Lista de Clientes </a>
     </form>
   </div>
