@@ -13,8 +13,14 @@
 <body>
 <pre>
 <?php
-	$c1 = new Caneta('BIC', 'azul', 50);
-	echo "<p>Eu tenho uma caneta {$c1->getModelo()} da cor {$c1->getCor()} de ponta {$c1->getPonta()}</p>";
+	$c1 = new Caneta;
+	$c1->modelo = "BIC Cristal";
+	$c1->cor = "Azul";
+	//$c1->ponta = 0.5;
+	//$c1->carga = 0.5;
+	// $c1->tampada = true;
+	$c1->rabiscar();
+	$c1->tampar();
 	print_r($c1);
 
 ?>

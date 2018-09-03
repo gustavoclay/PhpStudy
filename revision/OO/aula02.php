@@ -11,13 +11,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<pre>
 <?php
-	$c1 = new Caneta('BIC', 'azul', 50);
-	echo "<p>Eu tenho uma caneta {$c1->getModelo()} da cor {$c1->getCor()} de ponta {$c1->getPonta()}</p>";
+	$c1 = new Caneta;
+	$c1->cor = 'Azul';
+	$c1->ponta = '0.5';
+	$c1->tampada = false;
+
 	print_r($c1);
+	echo "<hr>";
+	$c1->tampar();
+	$c1->rabiscar();
+	echo "<hr>";
+	$c1->destampar();
+	$c1->rabiscar();
+	echo "<hr>";
+
+	$c2 = new Caneta;
+	$c2->cor = 'Vermelha';
+	$c2->ponta = '50';
+	$c2->tampar();
+	print_r($c2);
 
 ?>
-</pre>
 </body>
 </html>
