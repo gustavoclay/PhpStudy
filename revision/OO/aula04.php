@@ -13,7 +13,9 @@
 <body>
 <pre>
 <?php
-	
+	$c1 = new Caneta('BIC', 'azul', 50);
+	echo "<p>Eu tenho uma caneta {$c1->getModelo()} da cor {$c1->getCor()} de ponta {$c1->getPonta()}</p>";
+	print_r($c1);
 
 ?>
 </pre>
