@@ -1,5 +1,5 @@
 <?php
-require_once 'ControleRemoto.php';
+require_once 'ContaBanco.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,15 +11,25 @@ require_once 'ControleRemoto.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>Projeto Controle Remoto</h1>
 <pre>
 <?php
-$c = new ControleRemoto();
-$c->ligar();
+$c1 = new ContaBanco();
+$c2 = new ContaBanco();
 
-$c->abrirMenu();
-echo "<hr>";
-var_dump($c);
+$c1->abrirConta("CC");
+$c1->setDono("João");
+$c1->setNumConta(1111);
+
+
+
+$c2->abrirConta("CP");
+$c2->setDono("Maria");
+$c2->setNumConta(2222);
+
+
+
+print_r($c1);
+print_r($c2);
 
 ?>
 </pre>
