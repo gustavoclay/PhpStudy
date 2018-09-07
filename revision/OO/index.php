@@ -1,5 +1,5 @@
 <?php
-require_once 'ControleRemoto.php';
+require_once 'Lutador.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +11,12 @@ require_once 'ControleRemoto.php';
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>Projeto Controle Remoto</h1>
+<h1>Projeto UFC</h1>
 <pre>
 <?php
+$l1 = new Lutador("João", "Brasileira", 25, 1.90, 85, 0, 0, 0);
+print_r($l1);
+
 
 
 ?>
