@@ -14,7 +14,12 @@ require_once 'ControleRemoto.php';
 <h1>Projeto Controle Remoto</h1>
 <pre>
 <?php
+$c = new ControleRemoto();
+//$c->ligar();
 
+$c->abrirMenu();
+echo "<hr>";
+var_dump($c);
 
 ?>
 </pre>
